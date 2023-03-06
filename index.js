@@ -35,6 +35,10 @@ app.use("/binType", binType);
 app.use("/vehicle", vehicle);
 app.use("/user", user);
 
+app.get('/',async(req,res)=>{
+    res.send([{Info:"Welcome to API Information page for the SWM system" }])
+});
+
 app.listen(Port, () =>
   console.log(`Server listening on http://localhost:${Port}`)
 );
